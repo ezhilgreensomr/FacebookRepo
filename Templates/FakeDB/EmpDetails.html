@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EmpDetails</title>
+</head>
+<body>
+
+<h2>Employee Details: </h2>
+
+<table border="1" cellpadding="15px">
+    <tr>
+        <th>employee_id</th>
+        <th>employee_name</th>
+        <th>employee_age</th>
+        <th>employee_email</th>
+        <th>employee_salary</th>
+        <th>employee_address</th>
+    </tr>
+    {% for e in emp %}
+    <tr>
+        <td>{{e.employee_id}}</td>
+        <td>{{e.employee_name}}</td>
+        <td>{{e.employee_age}}</td>
+        <td>{{e.employee_email}}</td>
+        <td>{{e.employee_salary}}</td>
+        <td>{{e.employee_address}}</td>
+        <td><a href="/fake/updatedata/{{e.employee_id}}">update</a></td>
+        <td><a href="/fake/deletedata/{{e.employee_id}}">delete</a></td>
+        <!--       http://127.0.0.1:8000/fake/deletedata/820 -->
+        <!--       http://127.0.0.1:8000/fake/updatedata/820 -->
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+
+</body>
+</html>

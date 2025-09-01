@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+</head>
+<body>
+
+<h2>Django Messages Example</h2>
+
+{% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+    <nav>
+        <a href="/alert/success/">Success</a> |
+        <a href="/alert/error/">Error</a> |
+        <a href="/alert/warning/">Warning</a> |
+        <a href="/alert/info/">Info</a>
+    </nav>
+
+</body>
+</html>

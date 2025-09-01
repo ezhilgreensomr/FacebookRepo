@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    {% load static %}
+
+</head>
+<body>
+
+<table>
+
+    <tr>
+
+        <th>emp_id</th>
+        <th>emp_name</th>
+        <th>emp_age</th>
+        <th>emp_email</th>
+        <th>emp_addr</th>
+
+    </tr>
+
+    {% for emp in emp_details %}
+
+    <tr>
+        <td>{{emp.emp_id}}</td>
+        <td>{{emp.emp_name}}</td>
+        <td>{{emp.emp_age}}</td>
+        <td>{{emp.emp_email}}</td>
+        <td>{{emp.emp_addr}}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
